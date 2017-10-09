@@ -1,0 +1,29 @@
+{
+  "name": "ethical-composer-utility",
+  "version": "0.0.0",
+  "description": "Task composer for the Ethical framework.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "nutra --config ./nutra.config.js && npm run prepublish",
+    "test-debugger": "DEBUG=1 node --inspect-brk ./node_modules/.bin/nutra --config ./nutra.config.js",
+    "build": "babel src --out-dir dist --source-maps",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethically/ethical-composer-utility.git"
+  },
+  "author": "m-a-r-c-e-l-i-n-o <me@marceli.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "nutra": "0.0.14",
+    "nutra-jasmine-coverage-babel-preset": "0.0.10",
+    "performance-now": "^2.1.0"
+  },
+  "dependencies": {
+    "koa-compose": "^4.0.0"
+  }
+}
